@@ -23,4 +23,5 @@
 'django.middleware.csrf.CsrfViewMiddleware',```代码注释掉，目前来看，这样的方法效果比较乐观
 + Q：除了Navicat，还有没有其他的数据库管理工具
 <br>A：如果你用pycharm,恭喜你，在页面的右栏写着"Database"，可以直接连接并管理你的数据库，相比于Navicat，pycharm自带的数据库功能更全，界面更酷，管理更方便，也更集成
+<br>
 ##有关更多项目细节，我们将在项目发布后进行分享~~~
