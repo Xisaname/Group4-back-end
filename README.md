@@ -26,7 +26,7 @@
 <br>A：如果你用pycharm,恭喜你，在页面的右栏写着"Database"，可以直接连接并管理你的数据库，相比于Navicat，pycharm自带的数据库功能更全，界面更酷，管理更方便，也更集成,方便Mybatis和flyway等各种数据库管理插件使用
 <br>
 ## 部分代码展示
-<br>
+
 ```
 def receive(request):
     #获取前端参数
