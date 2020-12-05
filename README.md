@@ -14,7 +14,9 @@
 * Django只支持MySQL5.7以上的版本，如需使用数据库，请升级到此版本以上，以免引起不必要的麻烦
 <br>
 * 个人在导包的时候更推荐在控制台使用pip工具直接从官网或GitHub导到本地，不推荐使用pycharm中的setting选项，因为这样做有时会出现错误
+<br>
 * [关于pip的使用方法](https://pip.pypa.io/en/stable/)
+<br>
 * 强烈建议将所有的包集成到Python3*_64/Scripts文件夹下，并将此路径导入到系统路径中
 
 ## 一些问题及解决方法
@@ -24,6 +26,7 @@
 <br>A：如果你用pycharm,恭喜你，在页面的右栏写着"Database"，可以直接连接并管理你的数据库，相比于Navicat，pycharm自带的数据库功能更全，界面更酷，管理更方便，也更集成,方便Mybatis和flyway等各种数据库管理插件使用
 <br>
 ## 部分代码展示
+<br>
 ```
 def receive(request):
     #获取前端参数
