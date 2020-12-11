@@ -58,6 +58,7 @@ def detect(save_img=False):
     half = half and device.type != 'cpu'  # half precision only supported on CUDA
     if half:
         model.half()
+    #model.half()
 
     # Set Dataloader
     vid_path, vid_writer = None, None

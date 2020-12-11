@@ -2,7 +2,7 @@
 
 from django.http import HttpResponse
 
-from yolov3test.models import Image
+from faceMask.models import Image
 
 
 # 数据库操作

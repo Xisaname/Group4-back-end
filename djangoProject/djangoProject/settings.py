@@ -25,7 +25,7 @@ SECRET_KEY = 'w)w_ffym3cc(gtl-+%k%ay(262!=anvaj9ri#8^#q2g1y%(qcf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['106.53.227.216', 'www.oucsrdpwechat.com']
 
 
 # Application definition
@@ -37,20 +37,49 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'yolov3test'
+    'corsheaders',
+    'faceMask',
 ]
-
-CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 ]
+# 跨域增加忽略
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+#CORS_ORIGIN_WHITELIST = (
+#    '*'
+#)
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+    'VIEW',
+)
+
+CORS_ALLOW_HEADERS = (
+    'XMLHttpRequest',
+    'X_FILENAME',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'Pragma',
+)
 
 ROOT_URLCONF = 'djangoProject.urls'
 
@@ -81,7 +110,7 @@ DATABASES = {
     'default':
     {
         'ENGINE': 'django.db.backends.mysql',    # 数据库引擎
-        'NAME': 'image',  # 数据库名称
+        'NAME': 'faceMask',  # 数据库名称
         'HOST': '127.0.0.1',  # 数据库地址，本机 ip 地址 127.0.0.1
         'PORT': 3306,  # 端口
         'USER': 'root',  # 数据库用户名

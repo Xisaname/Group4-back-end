@@ -21,5 +21,8 @@ urlpatterns = [
     path('testdb/', testdb.testdb),
     path('hello/', views.hello),
     path('detect/', views.detect),
-    url(r'^receive/', views.receive)
+    url(r'^receive/', views.receive),
+    url(r'^user_images/', views.user_images),
+    url(r'^user_registered/', views.user_registered),
+    url(r'^user_getin/', views.user_getin)
 ]
