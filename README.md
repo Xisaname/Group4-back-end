@@ -21,34 +21,4 @@
 * Q：除了Navicat，还有没有其他的数据库管理工具
 <br>A：如果你用pycharm,恭喜你，在页面的右栏写着"Database"，可以直接连接并管理你的数据库，相比于Navicat，pycharm自带的数据库功能更全，界面更酷，管理更方便，也更集成,方便Mybatis和flyway等各种数据库管理插件使用
 <br>
-
-## 部分代码展示
-
-```
-def receive(request):
-    #获取前端参数
-    if request.method == "GET":
-        print("method is GET")
-        return render(request, "index.html")
-    #获取文件，格式为base64
-    fileFromPost = request.POST.get('filePath')
-    #获取用户id(目前写死，留出升级空间)
-    user = 111#request.POST.get('name')
-    print("--------------------GET---------------------------")
-    #根据base64格式，只截取数据部分
-    piece= 0
-    for i in range(50):
-        if fileFromPost[i]==',':
-            piece = i
-            break
-    file= fileFromPost[piece:len(fileFromPost):1]
-    #命名文件的方式，先哈希，再强转成字符串存储
-    filename=str(hash(file[2000:2010:1]))
-    url = "sample\\" + filename + ".jpg"#后期可根据base64实际格式修改
-    imgdata = base64.b64decode(file)#解码成图片并存储
-    f = open(url, "wb")
-    f.write(imgdata)
-    f.close()
-```
-<br>
 ## 有关更多项目细节，我们将在项目发布后进行分享~~~
