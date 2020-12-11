@@ -14,13 +14,11 @@
 - Django只支持MySQL5.7以上的版本，如需使用数据库，请升级到此版本以上，以免引起不必要的麻烦
 <br>
 - 个人在导包的时候更推荐在控制台使用pip工具直接从官网或GitHub导到本地，不推荐使用pycharm中的setting选项，因为这样做有时会出现错误
-
 <br>
 - [关于pip的使用方法](https://pip.pypa.io/en/stable/)
-
 <br>
 - 强烈建议将所有的包集成到Python3*_64/Scripts文件夹下，并将此路径导入到系统路径中
-
+<br>
 ## 一些问题及解决方法
 * Q：Django自带CRSF认证机制，用来防止伪响应，但带来了一个问题：当进行post提交数据时，如果不附加该证书，会报错，且数据不会被传递。
 <br>A：1. 不用post方法提交数据，改用get。但这样只能传小数据，对于大的数据，会报错 2. 在有数据交换的页面添加{{% crsf %}},但当我们用JavaScript时，例如传Ajax或者json时就会出现问题 3. 将setting.py中的```'django.middleware.csrf.CsrfViewMiddleware',```代码注释掉，目前来看，这样的方法效果比较乐观
