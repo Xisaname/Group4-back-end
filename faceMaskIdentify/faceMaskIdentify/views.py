@@ -30,7 +30,7 @@ def receive(request):
     #获取用户id
     userid = int(request.POST.get('userid'))
 
-    print("--------------------GET---------------------------")
+    print("--------------------RECEIVE---------------------------")
     print(len(fileFromPost))
     # 根据base64格式，只截取数据部分
     piece = 0
