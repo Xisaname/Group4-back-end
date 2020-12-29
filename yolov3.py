@@ -5,9 +5,9 @@ import os
 
 
 class yolov3:
-    def __init__(self, runpath='D:/Study/2020秋/软件工程/djangoProject/yolov3-archive'):
+    def __init__(self, runpath):
         print('----------init yolov3----------')
-        os.chdir('D:/Study/2020秋/软件工程/djangoProject/yolov3-archive')
+        os.chdir(os.path.dirname(os.path.abspath(__file__)))
         self.cfg = 'cfg/yolov3-tiny.cfg'
         self.weights = 'weights/best.pt'
         self.source = '0'
