@@ -21,16 +21,16 @@ def hello(request):
 
 
 def receive(request):
-    #获取前端参数
+    # 获取前端参数
     if request.method == "GET":
         print("method is GET")
         return HttpResponse({"code": 1, "msg": "error!"}, content_type="application/json")
-    #获取文件，格式为base64
+    # 获取文件，格式为base64
     fileFromPost = request.POST.get('filePath')
-    #获取用户id
+    # 获取用户id
     userid = int(request.POST.get('userid'))
 
-    print("--------------------RECEIVE---------------------------")
+    print("--------------------RECEIVE--------------------")
     print(len(fileFromPost))
     # 根据base64格式，只截取数据部分
     piece = 0
